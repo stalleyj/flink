@@ -155,7 +155,8 @@ under the License.
 		<hivemetastore.hadoop.version>2.7.5</hivemetastore.hadoop.version>
 		<japicmp.referenceVersion>1.13.1</japicmp.referenceVersion>
 		<japicmp.outputDir>tools/japicmp-output</japicmp.outputDir>
-		<spotless.version>2.4.2</spotless.version>
+		<spotless.version>2.12.1</spotless.version>
+	
 
 		<!-- Can be set to any value to reproduce a specific build. -->
 		<test.randomization.seed/>

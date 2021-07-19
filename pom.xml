@@ -1591,7 +1591,7 @@ under the License.
 						<!--suppress MavenModelInspection -->
 						<test.randomization.seed>${test.randomization.seed}</test.randomization.seed>
 					</systemPropertyVariables>
-					<argLine>-Xms256m -Dmvn.forkNumber=${surefire.forkNumber} -Xgcpolicy:gencon -Xverbose:gc -Xverbosegclog:verbosegc.log</argLine>
+					<argLine>-Xms256m -Dmvn.forkNumber=${surefire.forkNumber} -Xgcpolicy:gencon</argLine>
 				</configuration>
 				<executions>
 					<!--execute all the unit tests-->

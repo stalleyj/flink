@@ -402,15 +402,8 @@ public class StickyAllocationAndLocalRecoveryTestJob {
      * <p>Author: <a href="https://stackoverflow.com/users/446591/brad-mace">Brad Mace</a>)
      */
     private static int getJvmPid() throws Exception {
-        java.lang.management.RuntimeMXBean runtime =
-                java.lang.management.ManagementFactory.getRuntimeMXBean();
-        java.lang.reflect.Field jvm = runtime.getClass().getDeclaredField("jvm");
-        jvm.setAccessible(true);
-        sun.management.VMManagement mgmt = (sun.management.VMManagement) jvm.get(runtime);
-        java.lang.reflect.Method pidMethod = mgmt.getClass().getDeclaredMethod("getProcessId");
-        pidMethod.setAccessible(true);
-
-        return (int) (Integer) pidMethod.invoke(mgmt);
+        long pid = ProcessHandle.current().pid();
+        return (int)pid;
     }
 
     /** Records the information required to check sticky scheduling after a restart. */
